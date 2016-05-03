@@ -1,4 +1,2 @@
 To run:
-'''
-ruby watir.rb
-'''
+'ruby watir.rb'
