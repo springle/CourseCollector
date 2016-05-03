@@ -1,1 +1,4 @@
-'ruby watir.rb
+To run:
+'''
+ruby watir.rb
+'''
