@@ -80,6 +80,13 @@ class ScheduleScraper
 	    	page = Nokogiri::HTML(open(url))
 	    	course_rating = page.css("div.rating-big")[0].text
 	    	@info["course_rating"] = course_rating
+	    	instructor_ratings = page.css("div.ratings-instructor span")
+	    	puts instructor_ratings.count
+	    	instructor_ratings.each do |r|
+	    		rating = r.children[1].children[0].text
+	    		instructor = r.children[3].text
+	    		puts "Instructor: #{instructor}, Rating: #{rating}"
+	    	end
 	    rescue Exception => e
 	    	puts "Exception: #{e}"
 	    end
